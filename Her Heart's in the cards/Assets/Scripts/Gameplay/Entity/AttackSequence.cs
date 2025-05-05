@@ -75,8 +75,8 @@ public class AttackSequence : MonoBehaviour
             i++;
             yield return new WaitForSeconds(delay);
         }
-
         stars = new List<GameObject>();
+        yield return new WaitForSeconds(1f);
         isAttacking = false; // Reset the flag after the attack is done
     }
 
@@ -89,6 +89,7 @@ public class AttackSequence : MonoBehaviour
             prefab.GetComponent<Rigidbody2D>().linearVelocity = attackTransform.up * speed; // Adjust speed as needed
             yield return new WaitForSeconds(delay);
         }
+        yield return new WaitForSeconds(1f);
         isAttacking = false; // Reset the flag after the attack is done
     }
 }

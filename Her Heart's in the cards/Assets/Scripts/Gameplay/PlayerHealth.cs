@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(!other.CompareTag("Projectile")) return;
         gameManager.PlayerDamage();
+        Destroy(other.gameObject);
     }
 
 }

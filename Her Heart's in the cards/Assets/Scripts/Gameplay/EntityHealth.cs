@@ -13,5 +13,6 @@ public class EntityHealth : MonoBehaviour
     {
         if(!other.CompareTag("PlayerProjectile")) return;
         gameManager.EntityDamage();
+        Destroy(other.gameObject);
     }
 }
